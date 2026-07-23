@@ -1,0 +1,6 @@
+model,prompted_micro_f1,native_micro_f1,native_output_words,latency_s,allocated_vram_gb
+VILA-M3-3B,0.289,0.377,88,2.64,6.05
+CXR-LLaVA,0.271,0.270,35,4.44,14.29
+MedGemma,0.391,0.392,39,2.53,8.12
+CheXAgent,0.372,0.376,15,1.94,6.81
+Qwen3.5-9B,0.471,0.351,153,23.46,19.03

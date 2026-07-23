@@ -1,0 +1,29 @@
+# Template only. Fill the model identifier and revision from the checkpoint
+# manifest of the run that generated the camera-ready tables before publication.
+experiment_name: ema_miccai_2026_camera_ready
+task: Indonesian chest X-ray report generation for TB-screening support
+fold:
+  train: 1
+  test: 0
+teacher:
+  display_name: Qwen3.5-9B
+  runtime_model_id: unsloth/Qwen3.5-9B
+  local_checkpoint_directory: qwen3.5-9b
+  architecture: Qwen3_5ForConditionalGeneration
+  revision: REPLACE_WITH_VERIFIED_REVISION_OR_COMMIT
+  precisions: [fp16, int8, int4]
+student:
+  display_name: CheXAgent with LoRA
+  base_model_id: REPLACE_WITH_VERIFIED_CHEXAGENT_MODEL_ID
+  adapter: REPLACE_WITH_APPROVED_WEIGHT_LOCATION_OR_DOI
+evaluation:
+  label_set: TB-14
+  threshold: 0.5
+  prompt_modes: [native, prompted]
+  max_new_tokens: 256
+hardware:
+  accelerator: NVIDIA L4
+  record_latency_as: median seconds per report, excluding model-load time
+privacy:
+  dataset_public: false
+  patient_level_outputs_public: false

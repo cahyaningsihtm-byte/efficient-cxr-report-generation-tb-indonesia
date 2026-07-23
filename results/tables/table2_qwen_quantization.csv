@@ -1,0 +1,7 @@
+prompt_mode,precision,latency_s,allocated_vram_gb,precision_score,recall_score,micro_f1
+native,FP16,23.46,19.036,0.530,0.263,0.351
+native,INT8,34.81,12.185,0.523,0.245,0.334
+native,INT4,18.00,8.856,0.510,0.194,0.281
+prompted,FP16,23.55,19.078,0.427,0.524,0.471
+prompted,INT8,34.81,12.227,0.465,0.505,0.484
+prompted,INT4,18.11,8.899,0.486,0.412,0.446
