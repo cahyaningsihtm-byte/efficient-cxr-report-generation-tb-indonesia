@@ -8,13 +8,16 @@ fold:
 teacher:
   display_name: Qwen3.5-9B
   runtime_model_id: unsloth/Qwen3.5-9B
+  weights_url: https://huggingface.co/unsloth/Qwen3.5-9B
   local_checkpoint_directory: qwen3.5-9b
   architecture: Qwen3_5ForConditionalGeneration
   revision: REPLACE_WITH_VERIFIED_REVISION_OR_COMMIT
+  model_identity_note: Qwen3.5 multimodal vision-language model; not the historical Qwen-VL release.
   precisions: [fp16, int8, int4]
 student:
   display_name: CheXAgent with LoRA
-  base_model_id: REPLACE_WITH_VERIFIED_CHEXAGENT_MODEL_ID
+  base_model_id: StanfordAIMI/CheXagent-2-3b
+  weights_url: https://huggingface.co/StanfordAIMI/CheXagent-2-3b
   adapter: REPLACE_WITH_APPROVED_WEIGHT_LOCATION_OR_DOI
 evaluation:
   label_set: TB-14

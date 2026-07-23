@@ -44,6 +44,10 @@ credentials/
 data/*
 !data/README.md
 !data/.gitkeep
+!data/examples/
+!data/examples/README.md
+!data/examples/example_inputs.csv
+!data/examples/example_model_outputs.csv
 raw_data/
 private_data/
 dicom/

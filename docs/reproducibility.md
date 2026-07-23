@@ -34,7 +34,7 @@ Replace all placeholder values. The `.env` file is ignored by Git and must never
 
 - Record the exact model identifier, revision/commit, library versions, GPU, precision, prompt mode, decoding settings, batch size, and random seed.
 - Report latency as median seconds per report and state whether model-load time is excluded.
-- Keep the trained model family and checkpoint name unambiguous. Do not describe the teacher as `Qwen-VL` unless that exact, historical model was actually used.
+- Report the teacher as `Qwen3.5-9B`, a multimodal Qwen vision-language model loaded as `unsloth/Qwen3.5-9B`; avoid the historical `Qwen-VL` name because it refers to a different model family.
 - Keep raw reports, identifiers, per-case predictions, and paths outside Git.
 
 ## Validation before release
