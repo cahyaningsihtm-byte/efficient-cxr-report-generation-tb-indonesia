@@ -6,14 +6,20 @@ authors:
   - family-names: Cahyaningsih
     given-names: Retno Dwi
     orcid: "https://orcid.org/0009-0008-0537-3232"
+    affiliation: "Monash University"
+    email: "rdwi0001@student.monash.edu"
   - family-names: Yunus
     given-names: Reyhan Eddy
+    affiliation: "Universitas Indonesia"
   - family-names: Astagiri
     given-names: Prasandhya Yusuf
+    affiliation: "Universitas Indonesia"
   - family-names: Montana
     given-names: Giovanni
+    affiliation: "The University of Warwick"
   - family-names: Valindria
     given-names: Vanya
+    affiliation: "Monash University"
 repository-code: "https://github.com/cahyaningsihtm-byte/efficient-cxr-report-generation-tb-indonesia"
 date-released: "2026-07-24"
 preferred-citation:
@@ -23,14 +29,20 @@ preferred-citation:
     - family-names: Cahyaningsih
       given-names: Retno Dwi
       orcid: "https://orcid.org/0009-0008-0537-3232"
+      affiliation: "Monash University"
+      email: "rdwi0001@student.monash.edu"
     - family-names: Yunus
       given-names: Reyhan Eddy
+      affiliation: "Universitas Indonesia"
     - family-names: Astagiri
       given-names: Prasandhya Yusuf
+      affiliation: "Universitas Indonesia"
     - family-names: Montana
       given-names: Giovanni
+      affiliation: "The University of Warwick"
     - family-names: Valindria
       given-names: Vanya
+      affiliation: "Monash University"
   conference:
     name: "2nd MICCAI Workshop on Efficient Medical Artificial Intelligence"
     year: 2026
