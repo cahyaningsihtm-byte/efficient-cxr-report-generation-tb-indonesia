@@ -1,12 +1,12 @@
 # Model And Weight Availability
 
-The teacher runtime used in the experimental environment is `unsloth/Qwen3.5-9B`, with architecture `Qwen3_5ForConditionalGeneration`. This is the Qwen3.5-9B multimodal vision-language model used in the paper experiments. It is not the historical `Qwen-VL` model.
+The teacher runtime used in the paper experiments was loaded from the official Hugging Face repository as `Qwen/Qwen3.5-9B` and mirrored locally as `qwen3.5-9b`, with architecture `Qwen3_5ForConditionalGeneration`. The exact snapshot revision was not recoverable from the local checkpoint copy. This is the Qwen3.5-9B multimodal vision-language model and not the historical `Qwen-VL` model.
 
 The exact revision or commit used for the final paper tables should be recorded in `configs/paper_experiment.example.yaml` from the local checkpoint or run manifest.
 
 | Role | Model identifier used or to verify | Public source |
 | --- | --- | --- |
-| Qwen teacher | `unsloth/Qwen3.5-9B` | <https://huggingface.co/unsloth/Qwen3.5-9B> |
+| Qwen teacher | `Qwen/Qwen3.5-9B` | <https://huggingface.co/Qwen/Qwen3.5-9B> |
 | CheXAgent student/base baseline | `StanfordAIMI/CheXagent-2-3b` | <https://huggingface.co/StanfordAIMI/CheXagent-2-3b> |
 | MedGemma baseline | `google/medgemma-1.5-4b-it` | <https://huggingface.co/google/medgemma-1.5-4b-it> |
 | CXR-LLaVA-v2 baseline | `ECOFRI/CXR-LLAVA-v2` | <https://huggingface.co/ECOFRI/CXR-LLAVA-v2> |

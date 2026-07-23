@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated EMA MICCAI 2026 paper."
+title: "Accelerating Chest X-ray Report Generation for Tuberculosis Screening in Indonesia: An Efficiency-Aware Benchmark of Quantized and Distilled Vision-Language Models"
+type: software
+authors:
+  - family-names: Cahyaningsih
+    given-names: Retno Dwi
+    orcid: "https://orcid.org/0009-0008-0537-3232"
+  - family-names: Yunus
+    given-names: Reyhan Eddy
+  - family-names: Astagiri
+    given-names: Prasandhya Yusuf
+  - family-names: Montana
+    given-names: Giovanni
+  - family-names: Valindria
+    given-names: Vanya
+repository-code: "https://github.com/cahyaningsihtm-byte/efficient-cxr-report-generation-tb-indonesia"
+date-released: "2026-07-24"
+preferred-citation:
+  type: conference-paper
+  title: "Accelerating Chest X-ray Report Generation for Tuberculosis Screening in Indonesia: An Efficiency-Aware Benchmark of Quantized and Distilled Vision-Language Models"
+  authors:
+    - family-names: Cahyaningsih
+      given-names: Retno Dwi
+      orcid: "https://orcid.org/0009-0008-0537-3232"
+    - family-names: Yunus
+      given-names: Reyhan Eddy
+    - family-names: Astagiri
+      given-names: Prasandhya Yusuf
+    - family-names: Montana
+      given-names: Giovanni
+    - family-names: Valindria
+      given-names: Vanya
+  conference:
+    name: "2nd MICCAI Workshop on Efficient Medical Artificial Intelligence"
+    year: 2026

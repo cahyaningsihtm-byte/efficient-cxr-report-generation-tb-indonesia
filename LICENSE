@@ -1,0 +1,25 @@
+Copyright (c) 2026 Retno Dwi Cahyaningsih and co-authors
+
+License status: pending author-team and institutional approval.
+
+This repository is made available for research transparency and review of the
+EMA MICCAI 2026 paper:
+
+Accelerating Chest X-ray Report Generation for Tuberculosis Screening in
+Indonesia: An Efficiency-Aware Benchmark of Quantized and Distilled
+Vision-Language Models
+
+Unless and until a separate open-source licence is added, no permission is
+granted to copy, redistribute, sublicense, sell, or create derivative works from
+the repository contents, except where such rights are already permitted by law
+or by the licences of third-party components.
+
+The institutional chest X-ray/report dataset, patient-level metadata,
+case-level predictions, model checkpoints, and private LoRA adapter weights are
+not distributed in this repository and are not covered by this repository
+licence.
+
+Third-party software, base models, model weights, and external tools retain
+their original licences and terms. Users are responsible for complying with all
+applicable model-provider, software, ethics, privacy, institutional-governance,
+and data-use requirements.

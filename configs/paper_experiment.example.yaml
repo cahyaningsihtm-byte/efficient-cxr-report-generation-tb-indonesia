@@ -1,5 +1,5 @@
-# Template only. Fill the model identifier and revision from the checkpoint
-# manifest of the run that generated the camera-ready tables before publication.
+# Public experiment metadata template. Machine-specific paths, clinical data,
+# and private adapter weights are intentionally not included.
 experiment_name: ema_miccai_2026_camera_ready
 task: Indonesian chest X-ray report generation for TB-screening support
 fold:
@@ -7,18 +7,31 @@ fold:
   test: 0
 teacher:
   display_name: Qwen3.5-9B
-  runtime_model_id: unsloth/Qwen3.5-9B
-  weights_url: https://huggingface.co/unsloth/Qwen3.5-9B
+  runtime_model_id: Qwen/Qwen3.5-9B
+  weights_url: https://huggingface.co/Qwen/Qwen3.5-9B
   local_checkpoint_directory: qwen3.5-9b
   architecture: Qwen3_5ForConditionalGeneration
-  revision: REPLACE_WITH_VERIFIED_REVISION_OR_COMMIT
+  revision: not_recovered_from_local_checkpoint_copy
+  local_config:
+    model_type: qwen3_5
+    transformers_version: 4.57.0.dev0
   model_identity_note: Qwen3.5 multimodal vision-language model; not the historical Qwen-VL release.
   precisions: [fp16, int8, int4]
 student:
   display_name: CheXAgent with LoRA
   base_model_id: StanfordAIMI/CheXagent-2-3b
   weights_url: https://huggingface.co/StanfordAIMI/CheXagent-2-3b
-  adapter: REPLACE_WITH_APPROVED_WEIGHT_LOCATION_OR_DOI
+  adapter:
+    release_status: not_publicly_released
+    adapter_config_source: local adapter_config.json from the paper run
+    base_model_name_or_path: chexagent-2-3b
+    peft_type: LORA
+    task_type: CAUSAL_LM
+    r: 8
+    lora_alpha: 16
+    lora_dropout: 0.05
+    revision: null
+    target_modules_count: 168
 evaluation:
   label_set: TB-14
   threshold: 0.5
