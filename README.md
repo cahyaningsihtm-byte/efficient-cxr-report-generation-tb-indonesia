@@ -10,12 +10,6 @@ The project benchmarks a multimodal Qwen teacher under FP16, INT8, and INT4 infe
 
 The study dataset comprises chest X-ray images and paired radiology reports from the tuberculosis registry of Cipto Mangunkusumo Hospital (RSCM), Jakarta. Access to the anonymised data was provided through the BDC IMERI Idealab repository at the Indonesian Medical Education and Research Institute (IMERI), covering cases from 2015 and 2018-2019. The underlying clinical records are not distributed through this repository.
 
-## Repository status
-
-This is a **private preparation repository**. It contains only the selected, sanitised code and documentation needed to reproduce the published workflow on an appropriately approved dataset. It does not contain patient images, reports, identifiers, per-case predictions, checkpoints, or API tokens.
-
-The public release is prepared following a separate internal privacy and reproducibility review. The published repository will contain only the reviewed materials described below.
-
 ## What is included
 
 - Qwen FP16/INT8/INT4 inference code.
@@ -33,11 +27,10 @@ See [data/README.md](data/README.md) for the data policy and [models/README.md](
 
 ## Quick start
 
-1. Obtain approval to use an appropriate local dataset; do not copy it into this repository.
-2. Export the required Conda environments from the original compute system as described in [environments/README.md](environments/README.md).
-3. Copy `configs/paths.example.env` to a local `.env` file and replace every placeholder.
-4. Complete `configs/paper_experiment.example.yaml` from the manifest of the final experimental run.
-5. Follow the pipeline in [docs/reproducibility.md](docs/reproducibility.md).
+1. Create the required Conda environment using the specifications in [environments/README.md](environments/README.md).
+2. Copy `configs/paths.example.env` to a local `.env` file and provide the paths for the approved local data and model directories.
+3. Review `configs/paper_experiment.example.yaml` and set the experiment-specific parameters.
+4. Follow the pipeline in [docs/reproducibility.md](docs/reproducibility.md).
 
 ## Clinical-use statement
 
@@ -46,7 +39,3 @@ This research is for retrospective benchmarking and human-verifiable reporting s
 ## Acknowledgements
 
 This work was supported by the MICCAI Society 2026 Project Climate and Environmental Health award.
-
-## Citation and authorship
-
-Citation metadata, author affiliations, and licensing information will be provided in the final archival release.
