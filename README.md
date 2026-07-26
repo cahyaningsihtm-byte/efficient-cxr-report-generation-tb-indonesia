@@ -35,7 +35,7 @@ See [data/README.md](data/README.md) for the data policy and [models/README.md](
 
 The original base-model weights are available from their respective official repositories, as listed in [models/README.md](models/README.md). This repository does not redistribute third-party model weights.
 
-The LoRA adapters and distilled student checkpoints produced in this study are not currently included in the public release pending confirmation of institutional, licensing, and data-governance requirements.
+The LoRA adapters and distilled student checkpoints produced in this study are not included in the public release. Any future release would require separate approval under the applicable institutional, licensing, and data-governance requirements.
 
 ## Repository structure
 
@@ -142,6 +142,8 @@ This research is for retrospective benchmarking and human-verifiable reporting s
 ## Ethics and privacy
 
 This repository does not contain patient data, clinical images, raw radiology reports, patient identifiers, case-level predictions, split manifests, or institutional paths. Do not upload or transmit clinical data through GitHub Issues, pull requests, discussions, repository releases, or other public repository features.
+
+The study protocol was reviewed and approved by the Health Research Ethics Committee of the Faculty of Medicine, Universitas Indonesia - Cipto Mangunkusumo Hospital (ethical approval no. KET-68/UN2.F1/ETIK/PPM.00.02/2026; protocol no. 25-11-1726; approved 16 January 2026).
 
 Local users are responsible for ensuring that any use of institutional or clinical data complies with the applicable ethics approval, data-use agreement, institutional governance, privacy requirements, and model-provider terms. The institutional dataset is not distributed in this repository and is not covered by the repository licence.
 

@@ -14,4 +14,4 @@ The exact revision or commit used for the final paper tables should be recorded 
 
 The project does not redistribute Qwen, CheXAgent, X-Raydar, or other third-party model files. Users must obtain each upstream model from its authorised source and comply with its licence and access conditions.
 
-Trained LoRA adapter weights are not included in this repository. Any future distribution of adapters is subject to upstream licences, institutional governance, and explicit release approval.
+Trained LoRA adapter weights and distilled student checkpoints are not included in this repository. Any future distribution of adapters or checkpoints is subject to upstream licences, institutional governance, and explicit release approval.
