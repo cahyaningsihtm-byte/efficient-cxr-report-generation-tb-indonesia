@@ -6,13 +6,15 @@ This repository is the research-code and pipeline-level reproducibility package 
 
 The project benchmarks a Qwen3.5-9B multimodal vision-language teacher under FP16, INT8, and INT4 inference and distils report-level and representation-level supervision to a CheXAgent student. It evaluates automated TB-14 label agreement together with latency and allocated VRAM.
 
+![Workflow diagram](assets/workflow_diagram.png)
+
 ## Model identity
 
 The teacher model used for the Qwen experiments is `Qwen3.5-9B` with a 9B-parameter model family, loaded from the official Hugging Face repository as `Qwen/Qwen3.5-9B` and mirrored locally as `qwen3.5-9b` for the paper runs. The exact snapshot revision was not recoverable from the local copy. This is a multimodal Qwen vision-language model and should not be described as the historical `Qwen-VL` model. The Qwen teacher was selected for distillation because it achieved the strongest prompted micro-F1 among the candidate VLM baselines reported in the aggregate results.
 
 ## Data source and institutional collaboration
 
-The study dataset comprises chest X-ray images and paired radiology reports from the tuberculosis registry of Cipto Mangunkusumo Hospital (RSCM), Jakarta. Access to the anonymised data was provided through the BDC IMERI Idealab repository at the Indonesian Medical Education and Research Institute (IMERI), covering cases from 2015 and 2018-2019. The underlying clinical records are not distributed through this repository.
+The study used de-identified chest X-ray/report pairs from Cipto Mangunkusumo Hospital (RSCM), accessed through BDC IMERI Idealab. The underlying clinical records are not distributed through this repository.
 
 ## What is included
 
@@ -150,7 +152,7 @@ Local users are responsible for ensuring that any use of institutional or clinic
 
 ## Licence and citation
 
-Repository reuse is governed by [LICENSE](LICENSE). Third-party models, datasets, and software retain their own licences and terms. The institutional dataset is excluded from the repository licence.
+Repository reuse is governed by the MIT licence in [LICENSE](LICENSE), matching the CheXAgent student/base-model licence. Third-party models, datasets, and software retain their own licences and terms; in particular, the Qwen teacher model is distributed by its provider under Apache-2.0. The institutional dataset is excluded from the repository licence.
 
 Please cite the EMA MICCAI 2026 paper when using this repository. Preliminary machine-readable citation metadata is provided in [CITATION.cff](CITATION.cff); final DOI and Springer metadata should be updated after publication.
 

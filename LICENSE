@@ -1,31 +1,38 @@
+MIT License
+
 Copyright (c) 2026 Retno Dwi Cahyaningsih and co-authors
 
-License status: pending author-team and institutional approval.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-This repository is made available for research transparency and review of the
-EMA MICCAI 2026 paper:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Accelerating Chest X-ray Report Generation for Tuberculosis Screening in
-Indonesia: An Efficiency-Aware Benchmark of Quantized and Distilled
-Vision-Language Models
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-Unless and until a separate open-source licence is added, no permission is
-granted to copy, redistribute, sublicense, sell, or create derivative works from
-the repository contents, except where such rights are already permitted by law
-or by the licences of third-party components.
+Additional repository-specific notices:
 
-The institutional chest X-ray/report dataset, patient-level metadata,
-case-level predictions, merged checkpoints, full base-model checkpoints, and
-third-party model weights are not distributed in this repository and are not
-covered by this repository licence.
-
-The study-produced LoRA adapter artefacts included under `models/adapters/`
-are provided for research transparency and reproducibility review only, subject
-to this pending licence status and the applicable upstream base-model,
-institutional-governance, and data-use requirements. They are not intended for
-clinical use.
-
-Third-party software, base models, model weights, and external tools retain
-their original licences and terms. Users are responsible for complying with all
-applicable model-provider, software, ethics, privacy, institutional-governance,
-and data-use requirements.
+- This licence covers only the source code, documentation, public aggregate
+  result tables, public de-identified examples, and study-produced LoRA adapter
+  artefacts included in this repository.
+- The institutional chest X-ray/report dataset, patient-level metadata,
+  case-level predictions, merged checkpoints, full base-model checkpoints, and
+  third-party model weights are not distributed in this repository and are not
+  covered by this repository licence.
+- Third-party software, base models, model weights, and external tools retain
+  their original licences and terms. In particular, the Qwen teacher model is
+  distributed by its provider under Apache-2.0, while the CheXAgent student/base
+  model is distributed by its provider under MIT.
+- The included LoRA adapter artefacts are provided for research transparency
+  and reproducibility review only. They are not intended for clinical use,
+  diagnosis, triage, or patient management.

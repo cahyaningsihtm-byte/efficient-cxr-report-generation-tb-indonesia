@@ -1,6 +1,6 @@
 # Data Availability
 
-The study used de-identified chest X-ray images and paired radiology reports from the tuberculosis registry of Cipto Mangunkusumo Hospital (RSCM), Jakarta. Access to the anonymised data was provided through the BDC IMERI Idealab repository at the Indonesian Medical Education and Research Institute (IMERI), covering cases from 2015 and 2018-2019.
+The study used de-identified chest X-ray/report pairs from Cipto Mangunkusumo Hospital (RSCM), accessed through BDC IMERI Idealab.
 
 The dataset is not publicly distributed because its use is governed by institutional privacy, ethics, and data-use requirements.
 
