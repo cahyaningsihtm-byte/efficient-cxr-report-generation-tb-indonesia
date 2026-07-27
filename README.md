@@ -75,6 +75,27 @@ python src/evaluation/evaluate_tb14.py --input-csv /path/to/local_outputs/qwen/q
 
 The Qwen FP16 run reported about 19 GB allocated VRAM on an NVIDIA L4, while INT4 reported about 9 GB. Full commands, inputs, outputs, and validation checks are documented in [docs/reproducibility.md](docs/reproducibility.md).
 
+### Smoke test with the released adapter and public example images
+
+After obtaining the authorised CheXAgent base model, the released LoRA adapter can be tested on the two de-identified PNG examples:
+
+~~~bash
+conda env create -f environments/chexagent.yml
+conda activate chexagent
+python src/distillation/infer_chexagent_kd.py \
+  --model-path /path/to/StanfordAIMI-CheXagent-2-3b \
+  --adapter-path models/adapters/qwen_fp16_report_reprkd_prompted_l4_epoch1 \
+  --test-json data/examples/deidentified_chexagent_items.json \
+  --manifest-csv data/examples/deidentified_chexagent_manifest.csv \
+  --output-csv outputs/example_chexagent_lora_predictions.csv \
+  --prompt-mode prompted \
+  --mode chex_qf16_rrkd_example \
+  --model-name CheX-QF16-RRKD \
+  --limit 2
+~~~
+
+The command writes local predictions under `outputs/`, which is intentionally ignored by Git.
+
 ## Paper workflow
 
 The paper workflow is organised as follows:
@@ -154,7 +175,11 @@ Local users are responsible for ensuring that any use of institutional or clinic
 
 Repository reuse is governed by the MIT licence in [LICENSE](LICENSE), matching the CheXAgent student/base-model licence. Third-party models, datasets, and software retain their own licences and terms; in particular, the Qwen teacher model is distributed by its provider under Apache-2.0. The institutional dataset is excluded from the repository licence.
 
-Please cite the EMA MICCAI 2026 paper when using this repository. Preliminary machine-readable citation metadata is provided in [CITATION.cff](CITATION.cff); final DOI and Springer metadata should be updated after publication.
+If you use this repository, please cite our EMA MICCAI 2026 paper:
+
+> Retno Dwi Cahyaningsih, Reyhan Eddy Yunus, Prasandhya Yusuf Astagiri, Giovanni Montana, and Vanya Valindria. "Accelerating Chest X-ray Report Generation for Tuberculosis Screening in Indonesia: An Efficiency-Aware Benchmark of Quantized and Distilled Vision-Language Models." EMA MICCAI 2026. Publication link/DOI to be added after publication.
+
+Preliminary machine-readable citation metadata is provided in [CITATION.cff](CITATION.cff); final DOI and Springer metadata should be updated after publication.
 
 ## Acknowledgements
 

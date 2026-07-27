@@ -75,6 +75,7 @@ except Exception:
 
 
 NATIVE_PROMPT = "Describe the findings in this chest X-ray."
+IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff"}
 
 TB14_PROMPT = """Analyze this chest X-ray and write a radiology report with FINDINGS and IMPRESSION sections.
 
@@ -256,19 +257,28 @@ def resolve_join_filename(row: pd.Series) -> str:
 
 def build_dicom_path(row: pd.Series, dicom_root: str) -> str:
     """
-    Resolve DICOM path.
+    Resolve image path.
 
     If dicom_path already exists in the row and points to a .dcm file,
-    use it directly. Otherwise reconstruct using cv_filename-derived year/month.
+    use it directly. For public examples, cv_filename/dicom_path may point to a
+    metadata-stripped PNG/JPEG relative to dicom_root. Otherwise reconstruct
+    DICOM paths using cv_filename-derived year/month.
     """
     if "dicom_path" in row and pd.notna(row["dicom_path"]):
         dicom_path = str(row["dicom_path"]).strip()
-        if dicom_path.endswith(".dcm"):
-            return dicom_path
+        suffix = Path(dicom_path).suffix.lower()
+        if suffix == ".dcm" or suffix in IMAGE_EXTS:
+            p = Path(dicom_path)
+            return str(p if p.is_absolute() else Path(dicom_root) / p)
 
     filename = resolve_cv_filename(row)
     if not filename:
-        raise ValueError("Cannot resolve DICOM filename from cv_filename / filename / dcm_fn / dicom_path")
+        raise ValueError("Cannot resolve image filename from cv_filename / filename / dcm_fn / dicom_path")
+
+    suffix = Path(filename).suffix.lower()
+    if suffix in IMAGE_EXTS:
+        p = Path(filename)
+        return str(p if p.is_absolute() else Path(dicom_root) / p)
 
     info = extract_info_from_filename(filename)
     if info is None:
@@ -382,6 +392,14 @@ def load_rows(
 
 
 def load_dicom_as_pil(dcm_path: str):
+    suffix = Path(dcm_path).suffix.lower()
+    if suffix in IMAGE_EXTS:
+        image = Image.open(dcm_path).convert("RGB")
+        return image, {
+            "source_format": suffix.lstrip("."),
+            "image_size": list(image.size),
+        }
+
     ds = pydicom.dcmread(dcm_path, force=True)
     pixel_array = ds.pixel_array.astype(np.float32)
 

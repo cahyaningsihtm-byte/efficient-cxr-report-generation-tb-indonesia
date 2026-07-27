@@ -49,6 +49,8 @@ data/*
 !data/examples/example_inputs.csv
 !data/examples/example_model_outputs.csv
 !data/examples/deidentified_example_inputs.csv
+!data/examples/deidentified_chexagent_manifest.csv
+!data/examples/deidentified_chexagent_items.json
 !data/examples/images/
 !data/examples/images/.gitkeep
 !data/examples/images/*.png
@@ -74,6 +76,7 @@ reports/
 *.dicom
 *manifest*.csv
 !data/examples/public_examples_manifest.csv
+!data/examples/deidentified_chexagent_manifest.csv
 *metadata*.csv
 !data/examples/deidentified_example_inputs.csv
 *patient*.csv

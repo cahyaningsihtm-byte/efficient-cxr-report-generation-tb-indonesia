@@ -8,7 +8,7 @@ This package supports code-level and pipeline-level reproduction of the computat
 
 1. A compatible Linux GPU environment. The reported deployment measurements used an NVIDIA L4 GPU.
 2. The exported Conda specifications described in [../environments/README.md](../environments/README.md). The Qwen environment records Python 3.10.20, PyTorch 2.7.1+cu118, Transformers 5.8.0, PEFT 0.18.1, and bitsandbytes 0.49.2.
-3. Approved local access to the image/report dataset and any required model checkpoints.
+3. Approved local access to the image/report dataset and any required model checkpoints. The released de-identified PNG examples can be used only for smoke testing the public inference path; they are not sufficient to reproduce paper metrics.
 4. A compatible local checkout of the external X-Raydar NLP implementation for semantic scoring.
 
 ## Configuration
@@ -35,6 +35,25 @@ For PEFT/LoRA adapters, inspect `adapter_config.json`. Record the base model pat
 4. **Student distillation.** Use `src/distillation/train_chexagent_reprkd.py` with the approved CheXAgent base model, stage-1 adapter, training JSON, teacher representation cache, and image folder.
 5. **Student inference.** Use `src/distillation/infer_chexagent_kd.py`; then use `src/evaluation/build_clean_eval_csv.py` and repeat steps 2-3.
 6. **Paper analyses.** Use `src/analysis/compute_bootstrap_micro_f1_ci.py` for confidence intervals and `src/analysis/create_tb14_kd_delta_chart.py` for the per-abnormality figure.
+
+## Public example smoke test
+
+The released LoRA adapter can be run on the two de-identified PNG examples after the authorised CheXAgent base model is available locally:
+
+~~~bash
+python src/distillation/infer_chexagent_kd.py \
+  --model-path /path/to/StanfordAIMI-CheXagent-2-3b \
+  --adapter-path models/adapters/qwen_fp16_report_reprkd_prompted_l4_epoch1 \
+  --test-json data/examples/deidentified_chexagent_items.json \
+  --manifest-csv data/examples/deidentified_chexagent_manifest.csv \
+  --output-csv outputs/example_chexagent_lora_predictions.csv \
+  --prompt-mode prompted \
+  --mode chex_qf16_rrkd_example \
+  --model-name CheX-QF16-RRKD \
+  --limit 2
+~~~
+
+This smoke test checks the public adapter loading and image-inference path. It does not reproduce the paper metrics because the private fold definitions, case-level reference labels, and full institutional dataset are not public.
 
 ## Required reporting controls
 

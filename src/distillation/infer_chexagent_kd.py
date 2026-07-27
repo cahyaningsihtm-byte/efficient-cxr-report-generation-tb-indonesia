@@ -12,6 +12,7 @@ from PIL import Image
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
 
+IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".bmp", ".tif", ".tiff"}
 
 NORMALIZATION_MAP = {
     "ild": "interstitial lung disease",
@@ -49,6 +50,10 @@ FINDINGS:"""
 
 
 def dcm_to_pil(dcm_path: str) -> Image.Image:
+    suffix = Path(dcm_path).suffix.lower()
+    if suffix in IMAGE_EXTS:
+        return Image.open(dcm_path).convert("RGB")
+
     ds = pydicom.dcmread(dcm_path, force=True)
     arr = ds.pixel_array.astype(np.float32)
     arr = (arr - arr.min()) / (arr.max() - arr.min() + 1e-8) * 255.0
@@ -154,6 +159,14 @@ def load_items(test_json, manifest_csv):
     return items, meta
 
 
+def resolve_local_path(path_value: str, base_dir: Path) -> str:
+    path_text = str(path_value or "").strip()
+    if not path_text:
+        return ""
+    p = Path(path_text)
+    return str(p if p.is_absolute() else base_dir / p)
+
+
 def count_params(model):
     total = sum(p.numel() for p in model.parameters())
     return total
@@ -210,6 +223,7 @@ def main():
     trainable_param_pct = adapter_param_pct
 
     items, meta = load_items(args.test_json, args.manifest_csv)
+    manifest_dir = Path(args.manifest_csv).resolve().parent
     if args.limit:
         items = items[: args.limit]
 
@@ -235,7 +249,7 @@ def main():
         for i, item in enumerate(items, 1):
             cid = Path(str(item["id"])).stem
             m = meta.get(cid, {})
-            dcm_path = m.get("dicom_path", "")
+            dcm_path = resolve_local_path(m.get("dicom_path", m.get("image", "")), manifest_dir)
             cv_filename = m.get("cv_filename", f"{cid}.dcm")
             image_name = m.get("image", item.get("image", ""))
 

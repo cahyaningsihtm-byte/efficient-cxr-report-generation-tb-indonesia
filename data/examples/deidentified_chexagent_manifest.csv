@@ -1,0 +1,3 @@
+cv_filename,dicom_path,image,cv_fold,split_name,expertise_en,prediction_nlp,example_note
+cxr_5e496bad1208.png,images/cxr_5e496bad1208.png,images/cxr_5e496bad1208.png,0,public_deidentified_example,"See reports/cxr_5e496bad1208.txt for de-identified Indonesian and prepared English report text.","{}",deidentified_real_example; not used to reproduce paper metrics
+cxr_65ef9378bd12.png,images/cxr_65ef9378bd12.png,images/cxr_65ef9378bd12.png,0,public_deidentified_example,"See reports/cxr_65ef9378bd12.txt for de-identified Indonesian and prepared English report text.","{}",deidentified_real_example; not used to reproduce paper metrics
