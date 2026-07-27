@@ -115,7 +115,7 @@ logs/
 *inference*.csv
 *.tmp
 
-# Internal pre-publication checklists; retain locally, never publish.
+# Local release-review notes (not tracked).
 docs/release_audit.md
 docs/publication_metadata.md
 

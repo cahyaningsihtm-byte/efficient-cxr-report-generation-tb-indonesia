@@ -2,7 +2,7 @@
 
 This repository is the research-code and pipeline-level reproducibility package for the EMA MICCAI 2026 paper above. The repository name is shortened for readability, but the full paper title is used here as the authoritative title.
 
-> Reproducibility scope: the public repository supports code-level and pipeline-level reproduction. Full numerical reproduction requires access to the institutional chest X-ray-report dataset, patient split definitions, case-level outputs, and local checkpoints, which are not publicly released.
+> Reproducibility scope: the public repository supports code-level and pipeline-level reproduction. Full numerical reproduction requires access to the institutional chest X-ray-report dataset, patient split definitions, case-level outputs, and full local checkpoints, which are not publicly released. The adapter-only LoRA artefact documented below is the approved exception.
 
 The project benchmarks a Qwen3.5-9B multimodal vision-language teacher under FP16, INT8, and INT4 inference and distils report-level and representation-level supervision to a CheXAgent student. It evaluates automated TB-14 label agreement together with latency and allocated VRAM.
 
@@ -45,7 +45,7 @@ The report-plus-representation KD LoRA adapter artefacts are included under [mod
 ~~~text
 .
 |-- configs/        # Path templates and public experiment metadata
-|-- data/           # Data availability statement and synthetic CSV examples
+|-- data/           # Data availability statement, synthetic format rows, and approved de-identified examples
 |-- docs/           # Reproducibility guide and release documentation
 |-- environments/   # Conda environment exports
 |-- models/         # Model identifiers, source links, adapter artefacts, and weight policy
@@ -61,7 +61,7 @@ The released entry points are under `src/`. Prompt templates used by the Qwen ex
 
 ## Quick start
 
-The commands below show the shape of a local run. They require approved local data, model checkpoints, and an external X-Raydar checkout; synthetic examples are provided only to document CSV structure.
+The commands below show the shape of a local run on an approved local dataset. They require approved local data, model checkpoints, and an external X-Raydar checkout. The repository also provides synthetic format rows and two approved de-identified CXR/report examples for public input-shape and inference smoke testing; neither example set can reproduce paper metrics.
 
 ~~~bash
 conda env create -f environments/qwen.yml
@@ -152,7 +152,7 @@ The exported Qwen environment used for the released workflow records the followi
 ## Limitations
 
 - The dataset is single-centre and comes from RSCM/BDC IMERI Idealab; no independent external validation set is released.
-- The public repository does not include the institutional dataset, patient split definitions, case-level predictions, or checkpoints, so full numerical reproduction is not possible from public files alone.
+- The public repository does not include the institutional dataset, patient split definitions, case-level predictions, or full model checkpoints. The released adapter-only LoRA artefact is not sufficient to reproduce the full paper workflow or numerical results from public files alone.
 - TB-14 evaluation is an automated semantic proxy, not radiologist-adjudicated ground truth.
 - The automated label-extraction workflow may introduce language-dependent noise because the source reports are Indonesian and the NLP labeler may not be optimised for Indonesian radiology text.
 - Latency and allocated-VRAM measurements are hardware-, driver-, CUDA-, and library-version dependent.
@@ -165,7 +165,7 @@ This research is for retrospective benchmarking and human-verifiable reporting s
 
 ## Ethics and privacy
 
-This repository does not contain patient data, clinical images, raw radiology reports, patient identifiers, case-level predictions, split manifests, or institutional paths. Do not upload or transmit clinical data through GitHub Issues, pull requests, discussions, repository releases, or other public repository features.
+Except for the two approved de-identified demonstration CXR/report examples under [`data/examples/`](data/examples/), this repository does not contain patient data, DICOM files, original identifiers, acquisition dates, case-level predictions, split manifests, or institutional paths. The public examples have source identifiers removed and the images are metadata-stripped PNG exports; they were not used to reproduce the paper metrics. Do not upload or transmit clinical data through GitHub Issues, pull requests, discussions, repository releases, or other public repository features.
 
 The study protocol was reviewed and approved by the Health Research Ethics Committee of the Faculty of Medicine, Universitas Indonesia - Cipto Mangunkusumo Hospital (ethical approval no. KET-68/UN2.F1/ETIK/PPM.00.02/2026; protocol no. 25-11-1726; approved 16 January 2026).
 

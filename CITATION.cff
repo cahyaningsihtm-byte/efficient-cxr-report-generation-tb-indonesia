@@ -21,7 +21,7 @@ authors:
     given-names: Vanya
     affiliation: "Monash University"
 repository-code: "https://github.com/cahyaningsihtm-byte/efficient-cxr-report-generation-tb-indonesia"
-date-released: "2026-07-24"
+date-released: "2026-07-27"
 preferred-citation:
   type: conference-paper
   title: "Accelerating Chest X-ray Report Generation for Tuberculosis Screening in Indonesia: An Efficiency-Aware Benchmark of Quantized and Distilled Vision-Language Models"

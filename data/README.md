@@ -4,13 +4,18 @@ The study used de-identified chest X-ray/report pairs from Cipto Mangunkusumo Ho
 
 The dataset is not publicly distributed because its use is governed by institutional privacy, ethics, and data-use requirements.
 
-Consequently, this repository does not contain medical images, radiology reports, patient or study identifiers, data manifests, fold assignments, or case-level predictions.
+Except for the two approved de-identified demonstration examples described below, this repository does not contain the institutional medical-image dataset, raw radiology-report corpus, patient or study identifiers, data manifests, fold assignments, or case-level predictions. The public demonstration images are metadata-stripped PNG exports and their paired reports have source identifiers removed.
 
 The released code is designed to be applied to a local dataset only when the user has the necessary ethics approval, data-governance approval, and technical safeguards. The absence of public data should not be interpreted as authorisation to reconstruct, redistribute, or seek access to the underlying clinical records.
 
 ## Example files
 
-The [examples](examples/) directory contains two synthetic, format-only rows showing the expected CSV structure for local inference and evaluation preparation. These examples are not drawn from the RSCM/BDC dataset, are not part of the paper experiments, and must not be used to estimate model performance.
+The [examples](examples/) directory contains both of the following:
+
+- two synthetic, format-only rows showing the expected CSV structure for local inference and evaluation preparation; and
+- two approved de-identified CXR/report examples for public input-shape and inference smoke testing.
+
+Neither example set is part of the paper evaluation and neither may be used to estimate model performance, clinical utility, or generalisability. See [examples/README.md](examples/README.md) for the exact files and handling rules.
 
 ## Ethics approval
 

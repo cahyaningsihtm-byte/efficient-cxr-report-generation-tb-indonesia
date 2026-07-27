@@ -2,7 +2,7 @@
 
 ## Scope
 
-This package supports code-level and pipeline-level reproduction of the computational workflow behind the camera-ready paper on an appropriately approved local dataset. It does not make the clinical dataset, patient split definitions, case-level outputs, or trained weights public, so it is not a full numerical reproduction package.
+This package supports code-level and pipeline-level reproduction of the computational workflow behind the camera-ready paper on an appropriately approved local dataset. It does not make the clinical dataset, patient split definitions, case-level outputs, or full model checkpoints public, so it is not a full numerical reproduction package. The documented adapter-only LoRA artefact is the approved public exception.
 
 ## Prerequisites
 
@@ -62,14 +62,12 @@ This smoke test checks the public adapter loading and image-inference path. It d
 - Report the teacher as `Qwen3.5-9B`, a multimodal Qwen vision-language model corresponding to the verified local `qwen3.5-9b` checkpoint and upstream model `Qwen/Qwen3.5-9B`; avoid the historical `Qwen-VL` name because it refers to a different model family.
 - Keep raw reports, identifiers, per-case predictions, and paths outside Git.
 
-## Validation before release
+## Safe local validation
 
-Run the checks below before making the repository public:
+Before sharing a derivative release or contributing changes, run the checks below and manually inspect every non-ignored file. A clean Git status is not proof that a file is safe to publish.
 
 ~~~bash
 python -m compileall -q src
 git status --ignored
 git check-ignore -v data/example_file.dcm checkpoints/model.safetensors .env
 ~~~
-
-Review every non-ignored file manually. A clean Git status is not proof that a file is safe to publish.
