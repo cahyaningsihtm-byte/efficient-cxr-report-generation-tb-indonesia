@@ -92,6 +92,12 @@ hf_cache/
 *.pth
 *.bin
 *.onnx
+!models/adapters/
+!models/adapters/qwen_fp16_report_reprkd_prompted_l4_epoch1/
+!models/adapters/qwen_fp16_report_reprkd_prompted_l4_epoch1/README.md
+!models/adapters/qwen_fp16_report_reprkd_prompted_l4_epoch1/adapter_config.json
+!models/adapters/qwen_fp16_report_reprkd_prompted_l4_epoch1/adapter_model.safetensors
+!models/adapters/qwen_fp16_report_reprkd_prompted_l4_epoch1/representation_projection.pt
 
 # Per-case predictions, intermediate outputs, and scheduler logs
 outputs/

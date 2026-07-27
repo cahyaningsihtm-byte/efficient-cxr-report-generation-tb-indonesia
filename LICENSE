@@ -15,9 +15,15 @@ the repository contents, except where such rights are already permitted by law
 or by the licences of third-party components.
 
 The institutional chest X-ray/report dataset, patient-level metadata,
-case-level predictions, model checkpoints, and private LoRA adapter weights are
-not distributed in this repository and are not covered by this repository
-licence.
+case-level predictions, merged checkpoints, full base-model checkpoints, and
+third-party model weights are not distributed in this repository and are not
+covered by this repository licence.
+
+The study-produced LoRA adapter artefacts included under `models/adapters/`
+are provided for research transparency and reproducibility review only, subject
+to this pending licence status and the applicable upstream base-model,
+institutional-governance, and data-use requirements. They are not intended for
+clinical use.
 
 Third-party software, base models, model weights, and external tools retain
 their original licences and terms. Users are responsible for complying with all

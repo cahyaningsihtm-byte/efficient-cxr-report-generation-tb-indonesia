@@ -1,5 +1,5 @@
-# Public experiment metadata template. Machine-specific paths, clinical data,
-# and private adapter weights are intentionally not included.
+# Public experiment metadata template. Machine-specific paths and clinical data
+# are intentionally not included.
 experiment_name: ema_miccai_2026_camera_ready
 task: Indonesian chest X-ray report generation for TB-screening support
 fold:
@@ -22,7 +22,7 @@ student:
   base_model_id: StanfordAIMI/CheXagent-2-3b
   weights_url: https://huggingface.co/StanfordAIMI/CheXagent-2-3b
   adapter:
-    release_status: not_publicly_released
+    release_status: included_public_adapter_only
     adapter_config_source: local adapter_config.json from the paper run
     local_adapter_directory_name: qwen_fp16_report_reprkd_prompted_l4_epoch1
     base_model_name_or_path: chexagent-2-3b
@@ -38,7 +38,8 @@ student:
     adapter_weight_size_mb: 10.27
     representation_projection_file: representation_projection.pt
     representation_projection_size_mib: 40.018
-    adapter_directory_total_size_mib: 51.263
+    public_adapter_directory_total_size_mib: 49.823
+    original_local_adapter_directory_total_size_mib: 51.263
     merged_checkpoint_directory_name: qwen_fp16_report_reprkd_prompted_l4_epoch1_merged
     merged_checkpoint_note: Created by merging the LoRA adapter into the CheXAgent base model for deployment/compression experiments; not used as the adapter-path inference artefact and not publicly released.
 evaluation:

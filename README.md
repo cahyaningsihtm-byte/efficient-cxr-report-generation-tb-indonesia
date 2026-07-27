@@ -21,12 +21,13 @@ The study dataset comprises chest X-ray images and paired radiology reports from
 - Data-cleaning, X-Raydar preparation/scoring, TB-14 evaluation, bootstrap, and figure-generation code.
 - Portable configuration templates and privacy-preserving documentation.
 - Model source links and experiment configuration templates.
-- Two synthetic format examples showing the expected CSV structure without redistributing clinical records.
+- The study-produced CheXAgent LoRA adapter artefacts used for the report-plus-representation KD experiment.
+- Synthetic format examples and two de-identified public CXR/report examples for input-shape testing.
 
 ## What is not included
 
 - The institutional CXR-report dataset, DICOM files, raw reports, and patient-level metadata.
-- Per-case predictions, evaluation files, scheduler logs, model caches, or checkpoints.
+- Per-case predictions, evaluation files, scheduler logs, model caches, merged checkpoints, or full base-model checkpoints.
 - Third-party model weights and the external X-Raydar NLP source code.
 
 See [data/README.md](data/README.md) for the data policy and [models/README.md](models/README.md) for model and weight handling.
@@ -35,7 +36,7 @@ See [data/README.md](data/README.md) for the data policy and [models/README.md](
 
 The original base-model weights are available from their respective official repositories, as listed in [models/README.md](models/README.md). This repository does not redistribute third-party model weights.
 
-The LoRA adapters and distilled student checkpoints produced in this study are not included in the public release. Any future release would require separate approval under the applicable institutional, licensing, and data-governance requirements.
+The report-plus-representation KD LoRA adapter artefacts are included under [models/adapters/qwen_fp16_report_reprkd_prompted_l4_epoch1](models/adapters/qwen_fp16_report_reprkd_prompted_l4_epoch1). The merged CheXAgent checkpoint and any full distilled student/base-model checkpoints are not included. Any future release of merged or full checkpoints would require separate approval under the applicable institutional, licensing, and data-governance requirements.
 
 ## Repository structure
 
@@ -45,7 +46,7 @@ The LoRA adapters and distilled student checkpoints produced in this study are n
 |-- data/           # Data availability statement and synthetic CSV examples
 |-- docs/           # Reproducibility guide and release documentation
 |-- environments/   # Conda environment exports
-|-- models/         # Model identifiers, source links, and weight policy
+|-- models/         # Model identifiers, source links, adapter artefacts, and weight policy
 |-- results/        # Aggregate, non-identifiable tables from the paper
 `-- src/            # Inference, distillation, evaluation, and analysis code
     |-- analysis/
