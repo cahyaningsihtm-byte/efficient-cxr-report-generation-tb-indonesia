@@ -6,7 +6,7 @@ This repository is the research-code and pipeline-level reproducibility package 
 
 The project benchmarks a Qwen3.5-9B multimodal vision-language teacher under FP16, INT8, and INT4 inference and distils report-level and representation-level supervision to a CheXAgent student. It evaluates automated TB-14 label agreement together with latency and allocated VRAM.
 
-![Workflow diagram](assets/workflow_diagram.png)
+![Workflow diagram](assets/figure1_rev.png)
 
 ## Model identity
 
