@@ -1,0 +1,37 @@
+Example ID: cxr_5e496bad1208
+Source status: de-identified public example derived from an approved local chest X-ray/report pair.
+Original source identifiers, record numbers, dates, and file names are not included.
+
+Indonesian radiology report:
+Teknik : Radiografi toraks dalam proyeksi PA.
+
+Jantung membesar, cardiothoracic ratio 70%.
+Aorta dan mediastinum superior tidak melebar.
+Trakhea relatif di tengah. Kedua hilus tidak menebal.
+Corakan bronkovaskular paru tidak meningkat
+Tampak fibroinfiltrat di lapang tengah dan bawah paru kanan 
+Lengkung diafragma dan sinus kostofrenikus kanan suram, kiri tertutup bayangan jantung
+Tampak penebalan pleura lateral kanan kiri
+Tulang-tulang kesan masih baik.
+
+Kesimpulan:
+Kardiomegali.
+Fibroinfiltrat di lapang tengah dan bawah paru kanan DD/TB paru
+Efusi pleura kanan, suspek efusi pleura kiri
+
+English prepared report, if available in the approved local metadata:
+Technique: Chest radiography in PA projection.
+
+The heart is enlarged, cardiothoracic ratio 70%.
+The aorta and superior mediastinum were not dilated.
+The trachea is relatively central. Both hiluses are not thickened.
+Pulmonary bronchovascular patterns were not increased
+Fibroinfiltrates were seen in the middle and lower fields of the right lung 
+The curve of the diaphragm and the right costophrenic sinus are gloomy, the left is covered by the shadow of the heart
+Visible right and left lateral pleural thickening
+The impression bones are still good.
+
+Conclusion:
+Cardiomegaly.
+Fibroinfiltrate in the middle and lower fields of the right lung of DD/TB lung
+Right pleural effusion, suspected left pleural effusion

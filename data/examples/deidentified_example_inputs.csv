@@ -1,0 +1,34 @@
+cv_filename,cv_fold,split_name,expertise_en,prediction_nlp,example_note
+images/cxr_5e496bad1208.png,0,public_deidentified_example,"Technique: Chest radiography in PA projection.
+
+The heart is enlarged, cardiothoracic ratio 70%.
+The aorta and superior mediastinum were not dilated.
+The trachea is relatively central. Both hiluses are not thickened.
+Pulmonary bronchovascular patterns were not increased
+Fibroinfiltrates were seen in the middle and lower fields of the right lung 
+The curve of the diaphragm and the right costophrenic sinus are gloomy, the left is covered by the shadow of the heart
+Visible right and left lateral pleural thickening
+The impression bones are still good.
+
+Conclusion:
+Cardiomegaly.
+Fibroinfiltrate in the middle and lower fields of the right lung of DD/TB lung
+Right pleural effusion, suspected left pleural effusion","{'abnormal_non_clinically_important': 0.10587958246469498, 'aortic_calcification': 0.002097331453114748, 'apical_changes': 0.05017390102148056, 'atelectasis': 0.01743381656706333, 'axillary_abnormality': 0.000887652684468776, 'bronchial_changes': 0.00340193510055542, 'bulla': 0.00034697348019108176, 'cardiomegaly': 0.998760461807251, 'cavity': 4.3346146412659436e-05, 'clavicle_fracture': 0.00011230925883864984, 'comparison': 0.8948721885681152, 'consolidation': 0.22044123709201813, 'cardiac_calcification': 0.0017198462737724185, 'dextrocardia': 0.00015677428746130317, 'dilated_bowel': 0.0007047088001854718, 'emphysema': 0.005590333137661219, 'ground_glass_opacification': 0.004946235101670027, 'hemidiaphragm_elevated': 0.0003445709007792175, 'hernia': 0.00030943501042202115, 'hyperexpanded_lungs': 0.002826513024047017, 'interstitial_shadowing': 0.9001283049583435, 'mediastinum_displaced': 0.0017120592528954148, 'mediastinum_widened': 0.009387049823999405, 'normal': 0.9859252572059631, 'object': 0.0005587208434008062, 'other': 0.5809975862503052, 'paraspinal_mass': 0.0004247965116519481, 'paratracheal_hilar_enlargement': 0.09914027154445648, 'parenchymal_lesion': 0.0024486889597028494, 'pleural_abnormality': 0.9979410767555237, 'pleural_effusion': 0.9938710927963257, 'pneumomediastinum': 0.000312376010697335, 'pneumoperitoneum': 0.00029571313643828034, 'pneumothorax': 0.000194022519281134, 'possible_diagnosis': 0.6414720416069031, 'recommendation': 0.002630337607115507, 'rib_fracture': 0.0003214871103409678, 'rib_lesion': 0.03537873178720474, 'scoliosis': 0.0030576582066714764, 'subcutaneous_emphysema': 4.884105874225497e-05, 'technical_issue': 0.934088408946991, 'undefined_sentence': 0.5552944540977478, 'tortuosity_aorta': 0.0008922073757275939, 'upper_lobe_blood_diversion': 0.005873972084373236, 'volume_loss': 0.003856037277728319}",deidentified_real_example; not used to reproduce paper metrics
+images/cxr_65ef9378bd12.png,0,public_deidentified_example,"Technique: Chest radiography in AP projection.
+Comparison: none.
+
+Description:
+Asymmetrical position.
+Heterogeneous consolidation was seen in the apex and midfield of the right lung accompanied by pulling of the trachea, mediastinum and right border of the heart to the right.
+A sheath was seen in the laterobasal right hemithorax covering the right costophrenic sinus, right hemidiaphragm, and part of the right border of the heart.
+There was thickening of the apicollateral pleura of the right hemithorax.
+Heart size is difficult to evaluate.
+The aorta and superior mediastinum are difficult to evaluate.
+The left hilum is thickened.
+Fibroinfiltrates were seen throughout the left lung field, especially the apex and in the visualized right lung field.
+Multiple ecstatic rings were also seen in the upper-middle field of the left lung accompanied by cavity formation in the middle field of the left lung.
+The diaphragmatic arch and left costophrenic sinus were norm[REDACTED]
+The bones that are visualized have an optimal impression of being intact.
+
+Conclusion:
+The picture is suggestive of duplex pulmonary tuberculosis with images of right lung atelectasis, DD/destroyed lung, accompanied by thickening of the right apicolateral pleura, right pleural effusion, bronchiectasis in the upper-middle field of the left lung and cavity formation in the middle field of the left lung","{'abnormal_non_clinically_important': 0.04605647176504135, 'aortic_calcification': 0.037025000900030136, 'apical_changes': 0.9798240661621094, 'atelectasis': 0.9261705279350281, 'axillary_abnormality': 0.024416251108050346, 'bronchial_changes': 0.9920701384544373, 'bulla': 0.028421778231859207, 'cardiomegaly': 9.067528299055994e-05, 'cavity': 0.9990445971488953, 'clavicle_fracture': 0.006558881141245365, 'comparison': 0.9290673136711121, 'consolidation': 0.8137439489364624, 'cardiac_calcification': 0.07054721564054489, 'dextrocardia': 0.013167562894523144, 'dilated_bowel': 0.008913708850741386, 'emphysema': 0.09839129447937012, 'ground_glass_opacification': 0.02753053791821003, 'hemidiaphragm_elevated': 0.007164803799241781, 'hernia': 0.0030063947197049856, 'hyperexpanded_lungs': 0.010633681900799274, 'interstitial_shadowing': 0.7884914875030518, 'mediastinum_displaced': 0.943533182144165, 'mediastinum_widened': 0.49073487520217896, 'normal': 0.8676929473876953, 'object': 0.8542720675468445, 'other': 0.8780229687690735, 'paraspinal_mass': 0.013559476472437382, 'paratracheal_hilar_enlargement': 0.9446961283683777, 'parenchymal_lesion': 0.08256684988737106, 'pleural_abnormality': 0.997536301612854, 'pleural_effusion': 0.6850135922431946, 'pneumomediastinum': 0.017481811344623566, 'pneumoperitoneum': 0.010080665349960327, 'pneumothorax': 0.03611433878540993, 'possible_diagnosis': 0.833689272403717, 'recommendation': 0.05935279652476311, 'rib_fracture': 0.0019460651092231274, 'rib_lesion': 0.01786353997886181, 'scoliosis': 0.01686403527855873, 'subcutaneous_emphysema': 0.004040099214762449, 'technical_issue': 0.9846853017807007, 'undefined_sentence': 0.6064836978912354, 'tortuosity_aorta': 0.04433758929371834, 'upper_lobe_blood_diversion': 0.011177646927535534, 'volume_loss': 0.43573129177093506}",deidentified_real_example; not used to reproduce paper metrics

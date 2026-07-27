@@ -1,0 +1,43 @@
+Example ID: cxr_65ef9378bd12
+Source status: de-identified public example derived from an approved local chest X-ray/report pair.
+Original source identifiers, record numbers, dates, and file names are not included.
+
+Indonesian radiology report:
+Teknik: Radiografi toraks dalam proyeksi AP.
+Perbandingan: tidak ada.
+
+Deskripsi:
+Posisi asimetris.
+Tampak konsolidasi heterogen di apeks dan lapangan tengah paru kanan disertai penarikan trakea, mediastinum dan batas kanan jantung ke kanan.
+Tampak perselubungan di laterobasal hemitoraks kanan yang menutupi sinus kostofrenikus kanan, hemidiafragma kanan, dan sebagian batas kanan jantung.
+Tampak penebalan pleura apikolateral hemitoraks kanan.
+Jantung ukuran sulit dievaluasi.
+Aorta dan mediastinum superior sulit dievaluasi.
+Hilus kiri menebal.
+Tampak fibroinfiltrat di seluruh lapangan paru kiri terutama apeks dan di lapangan paru kanan yang tervisualisasi.
+Tampak pula multipel cincin ektasis di lapangan atas-tengah paru kiri disertai formasi kavitas di lapangan tengah paru kiri.
+Lengkung diafragma dan sinus kostofrenikus kiri norm[REDACTED]
+Tulang-tulang yang tervisualisasi optimal kesan intak.
+
+Kesimpulan:
+Sugestif gambaran TBC paru duplex dengan gambaran atelektasis paru kanan, DD/ destroyed lung, disertai penebalan pleura apikolateral kanan, efusi pleura kanan, bronkiektasis lapangan atas-tengah paru kiri dan formasi kavitas di lapangan tengah paru kiri
+
+English prepared report, if available in the approved local metadata:
+Technique: Chest radiography in AP projection.
+Comparison: none.
+
+Description:
+Asymmetrical position.
+Heterogeneous consolidation was seen in the apex and midfield of the right lung accompanied by pulling of the trachea, mediastinum and right border of the heart to the right.
+A sheath was seen in the laterobasal right hemithorax covering the right costophrenic sinus, right hemidiaphragm, and part of the right border of the heart.
+There was thickening of the apicollateral pleura of the right hemithorax.
+Heart size is difficult to evaluate.
+The aorta and superior mediastinum are difficult to evaluate.
+The left hilum is thickened.
+Fibroinfiltrates were seen throughout the left lung field, especially the apex and in the visualized right lung field.
+Multiple ecstatic rings were also seen in the upper-middle field of the left lung accompanied by cavity formation in the middle field of the left lung.
+The diaphragmatic arch and left costophrenic sinus were norm[REDACTED]
+The bones that are visualized have an optimal impression of being intact.
+
+Conclusion:
+The picture is suggestive of duplex pulmonary tuberculosis with images of right lung atelectasis, DD/destroyed lung, accompanied by thickening of the right apicolateral pleura, right pleural effusion, bronchiectasis in the upper-middle field of the left lung and cavity formation in the middle field of the left lung
