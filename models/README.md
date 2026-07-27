@@ -14,4 +14,17 @@ The exact revision or commit used for the final paper tables should be recorded 
 
 The project does not redistribute Qwen, CheXAgent, X-Raydar, or other third-party model files. Users must obtain each upstream model from its authorised source and comply with its licence and access conditions.
 
+## Study-produced adapters and checkpoints
+
 Trained LoRA adapter weights and distilled student checkpoints are not included in this repository. Any future distribution of adapters or checkpoints is subject to upstream licences, institutional governance, and explicit release approval.
+
+The final report-plus-representation KD inference scripts used the adapter directory named `qwen_fp16_report_reprkd_prompted_l4_epoch1` as the `--adapter-path` with the CheXAgent base model. The local adapter directory contains:
+
+| Local artefact | Role in the study | Public release status | Approximate local size |
+| --- | --- | --- | --- |
+| `qwen_fp16_report_reprkd_prompted_l4_epoch1/adapter_model.safetensors` | PEFT LoRA adapter weights used with the CheXAgent base model | Not included | 9.795 MiB / 10.27 MB |
+| `qwen_fp16_report_reprkd_prompted_l4_epoch1/representation_projection.pt` | Representation-alignment projection produced for report-plus-representation KD | Not included | 40.018 MiB |
+| Full `qwen_fp16_report_reprkd_prompted_l4_epoch1/` adapter directory | Adapter metadata, tokenizer files, LoRA weights, and representation projection | Not included | 51.263 MiB |
+| `qwen_fp16_report_reprkd_prompted_l4_epoch1_merged/` | Merged CheXAgent checkpoint created by applying the LoRA adapter to the base model for deployment/compression experiments | Not included | Not measured in this release |
+
+The `_merged` checkpoint is distinct from the adapter-only artefact used as `--adapter-path` in the reported inference scripts. It should not be redistributed as part of this public code-level release.
