@@ -25,6 +25,3 @@ The final report-plus-representation KD inference scripts used the adapter direc
 | `qwen_fp16_report_reprkd_prompted_l4_epoch1/adapter_model.safetensors` | PEFT LoRA adapter weights used with the CheXAgent base model | Included | 9.795 MiB / 10.27 MB |
 | `qwen_fp16_report_reprkd_prompted_l4_epoch1/representation_projection.pt` | Representation-alignment projection produced for report-plus-representation KD | Included | 40.018 MiB |
 | Public `qwen_fp16_report_reprkd_prompted_l4_epoch1/` adapter directory | Adapter README, sanitised PEFT config, LoRA weights, and representation projection | Included | 49.823 MiB |
-| `qwen_fp16_report_reprkd_prompted_l4_epoch1_merged/` | Merged CheXAgent checkpoint created by applying the LoRA adapter to the base model for deployment/compression experiments | Not included | Not measured in this release |
-
-The `_merged` checkpoint is distinct from the adapter-only artefact used as `--adapter-path` in the reported inference scripts. It is not redistributed as part of this public code-level release.
