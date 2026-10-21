@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite the associated EMA MICCAI 2026 paper."
-title: "Accelerating Chest X-ray Report Generation for Tuberculosis Screening in Indonesia: An Efficiency-Aware Benchmark of Quantized and Distilled Vision-Language Models"
+title: "Efficient CXR Report Generation for Tuberculosis Screening in Indonesia"
 type: software
 authors:
   - family-names: Cahyaningsih
@@ -43,6 +43,7 @@ preferred-citation:
     - family-names: Valindria
       given-names: Vanya
       affiliation: "Monash University"
+  year: 2026
+  url: "https://papers.miccai.org/miccai-2026-sat/EMA_026.html"
   conference:
-    name: "2nd MICCAI Workshop on Efficient Medical Artificial Intelligence"
-    year: 2026
+    name: "2nd Efficient Medical AI Workshop (EMA)"
