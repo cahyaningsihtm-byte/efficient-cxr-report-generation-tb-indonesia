@@ -177,9 +177,16 @@ Repository reuse is governed by the MIT licence in [LICENSE](LICENSE), matching 
 
 If you use this repository, please cite our EMA MICCAI 2026 paper:
 
-> Retno Dwi Cahyaningsih, Reyhan Eddy Yunus, Prasandhya Yusuf Astagiri, Giovanni Montana, and Vanya Valindria. "Accelerating Chest X-ray Report Generation for Tuberculosis Screening in Indonesia: An Efficiency-Aware Benchmark of Quantized and Distilled Vision-Language Models." EMA MICCAI 2026. Publication link/DOI to be added after publication.
+> Retno Dwi Cahyaningsih, Reyhan Eddy Yunus, Prasandhya Yusuf Astagiri,
+> Giovanni Montana, and Vanya Valindria. “Accelerating Chest X-ray Report
+> Generation for Tuberculosis Screening in Indonesia: An Efficiency-Aware
+> Benchmark of Quantized and Distilled Vision-Language Models.”
+> Efficient Medical AI (EMA) Workshop, MICCAI 2026.
+> [Official paper record](https://papers.miccai.org/miccai-2026-sat/EMA_026.html)
+> · [Open-access PDF](https://papers.miccai.org/miccai-2026-sat/paper/EMA_026.pdf).
 
-Preliminary machine-readable citation metadata is provided in [CITATION.cff](CITATION.cff); final DOI and Springer metadata should be updated after publication.
+Machine-readable citation metadata is provided in [CITATION.cff](CITATION.cff).
+The Springer DOI and final proceedings details will be added when available.
 
 ## Acknowledgements
 
